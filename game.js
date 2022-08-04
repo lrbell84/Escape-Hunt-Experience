@@ -23,4 +23,6 @@ const items = [
     {name:"didi", image:"./images/didi.png"},
     {name:"stu", image:"./images/stu.png"},
     {name:"angelica", image:"./images/angelica.png"},
+    {name:"kimi", image:"./images/kimi.png"},
+    {name:"ball", image:"./images/ball.png"},
 ];
