@@ -15,15 +15,15 @@ const items = [
   { name: "angelica", image: "./images/angelica.png" },
   { name: "ball", image: "./images/ball.png" },
   { name: "chucky", image: "./images/chucky.png" },
-  { name: "didi", image: "didi.png" },
-  { name: "dil", image: "dil.png" },
-  { name: "kimi", image: "kimi.png" },
-  { name: "lillian", image: "lillian.png" },
-  { name: "phillip", image: "phillip.png" },
-  { name: "raptar", image: "raptar.png" },
-  { name: "spike", image: "spike.png" },
-  { name: "stu", image: "stu.png" },
-  { name: "susie", image: "susie.png" },
+  { name: "didi", image: "./images/didi.png" },
+  { name: "dil", image: "./images/dil.png" },
+  { name: "kimi", image: "./images/kimi.png" },
+  { name: "lillian", image: "./images/lillian.png" },
+  { name: "phillip", image: "./images/phillip.png" },
+  { name: "raptar", image: "./images/raptar.png" },
+  { name: "spike", image: "./images/spike.png" },
+  { name: "stu", image: "./images/stu.png" },
+  { name: "susie", image: "./images/susie.png" },
 ];
 
 //Initial Time
@@ -85,7 +85,7 @@ const matrixGenerator = (cardValues, size = 4) => {
       */
     gameContainer.innerHTML += `
      <div class="card-container" data-card-value="${cardValues[i].name}">
-        <div class="card-before">?</div>
+        <div class="card-before"><img src="./images/Rugrats-5.png"></div>
         <div class="card-after">
         <img src="${cardValues[i].image}" class="image"/></div>
      </div>
@@ -177,6 +177,6 @@ const initializer = () => {
   result.innerText = "";
   winCount = 0;
   let cardValues = generateRandom();
-  console.log(cardValues);
+//   console.log(cardValues);
   matrixGenerator(cardValues);
 };

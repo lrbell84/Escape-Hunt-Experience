@@ -9,13 +9,14 @@ body {
 }
 .wrapper {
   box-sizing: content-box;
-  width: 26.87em;
+  width: 32em;
   padding: 2.5em 3em;
   background-color: #ffffff;
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  top: 50%;
+  top: 55%;
+  bottom: auto;
   border-radius: 0.6em;
   box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
 }
@@ -34,8 +35,8 @@ body {
 }
 .card-container {
   position: relative;
-  width: 6.25em;
-  height: 6.25em;
+  width: 7em;
+  height: 8em;
   cursor: pointer;
 }
 .card-before,
@@ -52,12 +53,12 @@ body {
   backface-visibility: hidden;
 }
 .card-before {
-  background-color: #31c7f4;
+  background-color: #6f7476;
   font-size: 2.8em;
   font-weight: 600;
 }
 .card-after {
-  background-color: #ffffff;
+  background-color: #0a0a0a;
   transform: rotateY(180deg);
 }
 .card-container.flipped .card-before {
@@ -81,12 +82,13 @@ body {
   height: 100%;
   top: 0;
 }
-button:hover {
+button {
   border: none;
-  border-radius: 1em;
+  border-radius: 0.5em;
   padding: 2em 1.5em;
   cursor: pointer;
   box-shadow: #060606;
+  background-color: #b31a6e;
 }
 #stop {
   font-size: 1.1em;
