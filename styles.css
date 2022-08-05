@@ -1,35 +1,34 @@
 body {
-    background-image: url("./images/rugratstheme22.png");
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-  }
-  
-  .button {
-    background-color: plum;
-    width: 160px;
-    font-size: 20px;
-    padding: 15 42px;
-    border-radius: 15px;
-    border: 3px solid pink;
-    color: black;
-    text-align: center;
-    /* position: absolute;
+  background-image: url("./images/rugratstheme22.png");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+.button {
+  background-color: plum;
+  width: 160px;
+  font-size: 20px;
+  padding: 15 42px;
+  border-radius: 15px;
+  border: 3px solid pink;
+  color: black;
+  text-align: center;
+  /* position: absolute;
     top: 147px;
     left: 92px; */
-    position: absolute;
-    top: 23vh;
-    left: 8vw;
-  }
-  
-  h1,
-  p {
-    text-align: right;
-  }
-  
-  .button:hover {
-    background-color: #555555;
-    color: white;
-  }
-  
+  position: absolute;
+  top: 23vh;
+  left: 8vw;
+}
+
+h1,
+p {
+  text-align: right;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+}
