@@ -5,7 +5,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-color: #f431a0;
+  background-color: #ec68b3;
 }
 .wrapper {
   box-sizing: content-box;
@@ -68,7 +68,7 @@ body {
   transform: rotateY(0deg);
 }
 .controls-container {
-  background-image: url("./images/RugratsChase.png");
+  background-image: url("images/RugratsChase.png");
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
@@ -85,10 +85,10 @@ body {
 button {
   border: none;
   border-radius: 0.5em;
-  padding: 2em 1.5em;
+  padding: 1em 1.5em;
   cursor: pointer;
   box-shadow: #060606;
-  background-color: #b31a6e;
+  background-color: #ec68b3;
 }
 #stop {
   font-size: 1.1em;
@@ -113,4 +113,15 @@ button {
 #result h4 {
   font-size: 1.8em;
   margin: 0.6em 0 1em 0;
+}
+
+@media screen and (max-width: 425px) {
+  .main {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  body {
+    align-items: flex-start;
+  }
 }
