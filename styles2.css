@@ -19,11 +19,19 @@ body {
   bottom: auto;
   border-radius: 0.6em;
   box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  /* display: grid;
+  height: 70vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0.6em; */
 }
 .game-container {
   position: relative;
   width: 100%;
   display: grid;
+  height: 100%;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; */
   gap: 0.6em;
 }
 .stats-container {
@@ -70,7 +78,7 @@ body {
 .controls-container {
   background-image: url("images/RugratsChase.png");
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   background-size: cover;
@@ -116,17 +124,45 @@ button {
   margin: 0.6em 0 1em 0;
 }
 
-@media (min-width: 601px) {
+/* @media only screen and (max-width: 320px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+} */
+
+/* @media (max-width: 480px) {
   body {
-    background-image: url("images/RugratsChase.png") repeat -x;
+    background-position: center center;
+    background-image: url(images/RugratsChase.png);
+  }
+} */
+
+/* @media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-image: url(images/RugratsChase.png);
+    /* background-position: center center; */
+/* }
+}
+@media (min-width: 1025px) {
+  body {
+    background-image: url(images/RugratsChase.png);
+    /* background-position: center center; */
+/* }
+} */
+/* @media (min-width: 601px) {
+  body {
+    background-image: url("images/RugratsChase.png");
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 }
 @media (max-width: 600px) {
   body {
-    background-image: url("images/RugratsChase.png") repeat -x;
+    background-image: url("images/RugratsChase.png");
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
   }
-}
+} */

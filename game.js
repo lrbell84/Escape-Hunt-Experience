@@ -10,7 +10,7 @@ let interval;
 let firstCard = false;
 let secondCard = false;
 
-//Items array
+//Adding Characters & Their Images
 const items = [
   { name: "angelica", image: "./images/angelica.png" },
   { name: "ball", image: "./images/ball.png" },
@@ -33,7 +33,7 @@ let seconds = 0,
 let movesCount = 0,
   winCount = 0;
 
-//For timer
+//Adding the timer
 const timeGenerator = () => {
   seconds += 1;
   //minutes logic
@@ -47,25 +47,25 @@ const timeGenerator = () => {
   timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
 };
 
-//For calculating moves
+//Adding the calculations for the moves
 const movesCounter = () => {
   movesCount += 1;
   moves.innerHTML = `<span>Moves:</span>${movesCount}`;
 };
 
-//Pick random objects from the items array
+//Picking Random Card from the Array
 const generateRandom = (size = 4) => {
   //temporary array
   let tempArray = [...items];
   //initializes cardValues array
   let cardValues = [];
-  //size should be double (4*4 matrix)/2 since pairs of objects would exist
+  //Doubling the cards to make pairs (4*4 matrix)/2 
   size = (size * size) / 2;
   //Random object selection
   for (let i = 0; i < size; i++) {
     const randomIndex = Math.floor(Math.random() * tempArray.length);
     cardValues.push(tempArray[randomIndex]);
-    //once selected remove the object from temp array
+    //Once Card Selected Remove the object from temp array
     tempArray.splice(randomIndex, 1);
   }
   return cardValues;
@@ -74,7 +74,7 @@ const generateRandom = (size = 4) => {
 const matrixGenerator = (cardValues, size = 4) => {
   gameContainer.innerHTML = "";
   cardValues = [...cardValues, ...cardValues];
-  //simple shuffle
+  //Simple shuffle
   cardValues.sort(() => Math.random() - 0.5);
   for (let i = 0; i < size * size; i++) {
     /*
@@ -98,39 +98,39 @@ const matrixGenerator = (cardValues, size = 4) => {
   cards = document.querySelectorAll(".card-container");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      //If selected card is not matched yet then only run (i.e already matched card when clicked would be ignored)
+      //If selected card is not matched, then only run (i.e already matched card when clicked would be ignored)
       if (!card.classList.contains("matched")) {
-        //flip the cliked card
+        //Flip the clicked card
         card.classList.add("flipped");
-        //if it is the firstcard (!firstCard since firstCard is initially false)
+        //If it is the firstcard (!firstCard since firstCard is initially false)
         if (!firstCard) {
-          //so current card will become firstCard
+          //So current card will become firstCard
           firstCard = card;
-          //current cards value becomes firstCardValue
+          //Current cards value becomes firstCardValue
           firstCardValue = card.getAttribute("data-card-value");
         } else {
-          //increment moves since user selected second card
+          //Increment moves since user selected second card
           movesCounter();
-          //secondCard and value
+          //SecondCard and value
           secondCard = card;
           let secondCardValue = card.getAttribute("data-card-value");
           if (firstCardValue == secondCardValue) {
-            //if both cards match add matched class so these cards would beignored next time
+            //If both cards match add matched class so these cards would be ignored next time
             firstCard.classList.add("matched");
             secondCard.classList.add("matched");
-            //set firstCard to false since next card would be first now
+            //Set firstCard to false since next card would be first now
             firstCard = false;
-            //winCount increment as user found a correct match
+            //WinCount will increment as user found a correct match
             winCount += 1;
-            //check if winCount ==half of cardValues
+            //Check if winCount == half of cardValues
             if (winCount == Math.floor(cardValues.length / 2)) {
-              result.innerHTML = `<h2>You Won</h2>
+              result.innerHTML = `<h2>YAY! You Won!</h2>
             <h4>Moves: ${movesCount}</h4>`;
               stopGame();
             }
           } else {
-            //if the cards dont match
-            //flip the cards back to normal
+            //If the cards dont match
+            //Flip the cards back to normal
             let [tempFirst, tempSecond] = [firstCard, secondCard];
             firstCard = false;
             secondCard = false;
